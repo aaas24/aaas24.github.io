@@ -1,1 +1,35 @@
-theme: jekyll-theme-cayman
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site title
+title: "Xcent - Jekyll"
+
+# A description of your site for social meta tag, search engines, and feed.xml
+description: "Xcent is a Responsive One Page Personal Template for creative people. Xcent can be used for many purposes starting from minimal portfolios, freelancers, photography and much more."
+
+
+# The subpath of your site, e.g. /blog, for generating urls
+baseurl: 
+
+sass:
+  sass_dir: _sass
+
+# The base hostname & protocol of your site for where absolute urls are needed
+url: "https://beingeorge.com"
+
+# The shortname for your Disqus site to enable comments.
+disqus:
+
+# Author information - author info at the bottom of the post
+author_name: "ELLEN DOE"
+
+# Social links in the site footer
+twitter_username: "username"
+facebook_username: "username"
+googleplus_username: "+username"
+pinterest_username: "username"
+linkedin_username: "username"

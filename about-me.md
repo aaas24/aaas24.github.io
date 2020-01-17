@@ -1,7 +1,11 @@
-### More about me
-Technical Business Intelligence professional with over seven years of experience in multinational companies, I love utilizing technical tools to answer business questions and help shape better strategies. With a solid background in marketing research, I am currently managing MapR internal analytics initiatives, including a data lake cluster that leverages open source projects and MapR Converged Platform  (see Project section for more details) to provide on-demand reporting and self-exploration to employees. 
+layout: about me
+title: "ABOUT ME"
+permalink: /ABOUT-ME/
 
-I am passionate about data analytics, interesting in growing in data science and providing more spaces for women in technology, for which I am and active member of Women in Big Data Forum as well as and a volunteer in other groups in the Bay Area.
+### More about me
+I am a Technical Business Intelligence professional with over ten years of experience in multinational companies, I love utilizing technical tools to answer business questions and help shape better strategies. With a solid background in marketing research, I have managed internal analytics initiatives, including a data lake cluster that leverages open source projects (see Project section for more details) to provide on-demand reporting and self-exploration to employees. 
+
+I am passionate about data analytics and interested in growing in data science. When not studing new tools, I like spending time with my family. 
 
 
 Relevant Knowledge, Skills and Training
