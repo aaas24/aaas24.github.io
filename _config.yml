@@ -13,7 +13,7 @@ description: "Personal blog."
 
 
 # The subpath of your site, e.g. /blog, for generating urls
-baseurl: /BLOG
+baseurl:
 
 sass:
   sass_dir: _sass
