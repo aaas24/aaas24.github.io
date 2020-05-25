@@ -8,6 +8,9 @@
 	<link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
 
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	
+	<!-- Adding Google Analytics -->
+	{% include analytics.html %}
 
 	<!-- CSS -->
 	<!-- Bootstrap core CSS -->
