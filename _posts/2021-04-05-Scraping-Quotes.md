@@ -5,7 +5,7 @@ description: "Small project using a quotes website to scrape quote database and 
 date:   2021-04-05
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
 banner_image: blog-1200-400-python-2021-04-05.jpg
-category: Python
+category: Coding
 tags: [python, analytics , dataengineering]
 ---
 
@@ -14,7 +14,6 @@ I wanted to find a small project of something fun to practice python web scrappi
 
 <!--more-->
 
-### STEP BY STEP PROYECT
 
 * STEP 1 CHOSSING A WEBSITE 
 
@@ -24,22 +23,21 @@ Web scraping is an ethically debated practice. Many articles online argue what a
 
 * STEP 2 SET UP ENVIRONMENT
 
-####  Creating python environment
+######  Create python environment
     virtualenv test_scraping
 
-#### activate the environment "test_scraping"
+###### Activate the environment "test_scraping"
     . /Users/alialvarez/opt/anaconda3/bin/activate && conda activate /Users/alialvarez/opt/anaconda3/envs/test_scraping; 
 
-#### to deactivate the environment
-    conda deactivate
+ (to deactivate the environment use: <conda deactivate>)
 
-#### install needed packages
+###### Install needed packages
     sudo pip install beautifulsoup4
 
 
-STEP 3 SCRAPPING 
+* STEP 3 SCRAPPING 
     
-#### Fetch the content (should be done once)
+###### Fetch the complete html (should be done once)
 
 ```
 from urllib.request import urlopen
@@ -49,7 +47,7 @@ html = urlopen ( "http://quotes.toscrape.com" )
 bsObj = BeautifulSoup ( html . read (), 'html.parser')
 ```
 
-#### Parse the content
+###### Parse the desired content
 
 Our goal is to extract the names of the authors and their quotes, to later store them in a dictionary we can later query when we want to. 
 
@@ -126,6 +124,8 @@ print(quotesDic)
 ```
 
 The resulting dictionary can be converted into a data frame with the panda library and query easily. Moreover, more data can me added later. 
+
+
 
 ### CONCLUSIONS
 
