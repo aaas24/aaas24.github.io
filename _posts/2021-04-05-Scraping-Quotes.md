@@ -3,8 +3,8 @@ layout: post
 title:  "Scraping Website - Quote of the day"
 description: "Small project using a quotes website to scrape quote database and allow text search"
 date:   2021-04-05
-banner_preview: blog2.jpg
-banner_image: blog-banner.jpg
+banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
+banner_image: blog-1200-400-python-2021-04-05.jpg
 category: Python
 tags: [python, analytics , dataengineering]
 ---
@@ -13,8 +13,6 @@ tags: [python, analytics , dataengineering]
 I wanted to find a small project of something fun to practice python web scrapping skills and I thought of the many times a good quote would be useful to have at hand. I thought of starting of by building a base pool of famous quotes, which I could search, enrich and filter. 
 
 <!--more-->
-
-{% include image_full.html imageurl="/assets/images/blog-detail.jpg" title="Blog Desc" caption="Blog Image Desc" %}
 
 ### STEP BY STEP PROYECT
 
