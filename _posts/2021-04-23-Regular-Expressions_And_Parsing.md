@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Regular Expressions Playground"
+title:  "Regular Expressions & Parsing URLs"
 description: "Small project regarding regular expressions when parsing URLs"
 date:   2021-04-08
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
-banner_image: blog-banner.jpg
+banner_image: blog-1200-400-python-2021-04-05.jpg
 category: Coding
 tags: [python,  dataengineering, regex]
 ---
@@ -19,7 +19,7 @@ One common source of user information nowadays is web traffic. Either about my p
 3. To utilize **regular expressions** to extract or qualify the text form
  
 <!--more-->
-To follow along this project, I've made a copy of the code in this [location](https://github.com/aaas24/aaas24.github.io/tree/master/assets/post_files)
+To follow along this project, I've made a copy of the code in this [location](https://github.com/aaas24/aaas24.github.io/tree/master/assets/post_files/2021-04-23-Regular-Expressions_And_Parsing)
  
 ### STEP BY STEP PROJECT
  

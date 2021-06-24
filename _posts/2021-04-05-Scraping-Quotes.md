@@ -13,7 +13,7 @@ tags: [python, analytics , dataengineering]
 I wanted to find a small project of something fun to practice python web scrapping skills and I thought of the many times a good quote would be useful to have at hand. I thought of starting of by building a base pool of famous quotes, which I could search, enrich and filter. 
 
 <!--more-->
-
+To follow along this project, I've made a copy of the code in this [location](https://github.com/aaas24/aaas24.github.io/tree/master/assets/post_files/2021-04-05-Scraping-Quotes)
 
 ### STEP 1 CHOSSING A WEBSITE 
 
