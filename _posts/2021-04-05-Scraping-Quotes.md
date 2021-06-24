@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scraping Website - Quote of the day"
-description: "Small project using a quotes website to scrape quote database and allow text search"
+description:  "Small project using a quotes website to scrape quote database and allow text search"
 date:   2021-04-05
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
 banner_image: blog-1200-400-python-2021-04-05.jpg
