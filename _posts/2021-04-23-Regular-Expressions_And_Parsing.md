@@ -3,10 +3,10 @@ layout: post
 title:  "Regular Expressions Playground"
 description: "Small project regarding regular expressions when parsing URLs"
 date:   2021-04-08
-banner_preview: blog2.jpg
+banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
 banner_image: blog-banner.jpg
-category: Analytics
-tags: [python, analytics , dataengineering, regex]
+category: Coding
+tags: [python,  dataengineering, regex]
 ---
  
  
