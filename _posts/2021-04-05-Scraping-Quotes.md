@@ -15,29 +15,28 @@ I wanted to find a small project of something fun to practice python web scrappi
 <!--more-->
 
 
-* STEP 1 CHOSSING A WEBSITE 
+### STEP 1 CHOSSING A WEBSITE 
 
 Web scraping is an ethically debated practice. Many articles online argue what are the greylines and, although the purpose of this post is not to go deep into that discussion, it is something I had to evaluate when considering what to use in my practice. Luckly, the tech community has many valuable open assets. One that I found was the website: http://toscrape.com, which has a particular website for quotes, as it clearly states it: 
 
 > “A website that lists quotes from famous people. It has many endpoints showing the quotes in many different ways, each of them including new scraping challenges for you, as described below.” 
 
-* STEP 2 SET UP ENVIRONMENT
 
-######  Create python environment
+*  Create python environment
     virtualenv test_scraping
 
-###### Activate the environment "test_scraping"
+* Activate the environment "test_scraping"
     . /Users/alialvarez/opt/anaconda3/bin/activate && conda activate /Users/alialvarez/opt/anaconda3/envs/test_scraping; 
 
  (to deactivate the environment use: <conda deactivate>)
 
-###### Install needed packages
+* Install needed packages
     sudo pip install beautifulsoup4
 
 
-* STEP 3 SCRAPPING 
+###  STEP 3 SCRAPPING 
     
-###### Fetch the complete html (should be done once)
+* Fetch the complete html (should be done once)
 
 ```
 from urllib.request import urlopen
@@ -47,7 +46,7 @@ html = urlopen ( "http://quotes.toscrape.com" )
 bsObj = BeautifulSoup ( html . read (), 'html.parser')
 ```
 
-###### Parse the desired content
+* Parse the desired content
 
 Our goal is to extract the names of the authors and their quotes, to later store them in a dictionary we can later query when we want to. 
 
@@ -124,7 +123,6 @@ print(quotesDic)
 ```
 
 The resulting dictionary can be converted into a data frame with the panda library and query easily. Moreover, more data can me added later. 
-
 
 
 ### CONCLUSIONS
