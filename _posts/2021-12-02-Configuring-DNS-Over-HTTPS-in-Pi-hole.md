@@ -90,5 +90,5 @@ sudo systemctl status cloudflared
 Finally, configure Pi-hole to use the local cloudflared service as the upstream DNS server by logging into the Web Console, selecting "Settings" in the left panel, clicking on "DNS" on the tabs and specifying 127.0.0.1#5053 as the Custom DNS (IPv4), as shown in the image:
 
 <p align="center">
-  <img src="https://github.com/aaas24/aaas24.github.io/blob/master/assets/post_files/2021-11-20-Pi-hole/configuring-Upstream-DNS-Servers.jpg" alt="Upstream DNS Servers" width="600">
+  <img src="https://github.com/aaas24/aaas24.github.io/blob/master/assets/post_files/2021-12-02-Configuring-DNS-Over-HTTPS-in-Pi-hole/configuring-Upstream-DNS-Servers.jpg" alt="Upstream DNS Servers" width="600">
 </p>
