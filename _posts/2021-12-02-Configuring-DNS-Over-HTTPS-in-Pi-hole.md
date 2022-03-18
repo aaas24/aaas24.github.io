@@ -142,7 +142,7 @@ sudo chown root:root /etc/default/cloudflared-updater
 - creating the cronjob
 If you are not familiar with cronjob, I suggest reading the manual or [this post](/etc/cron.weekly/cloudflared-updater). In my case, I tend to schedule updates off business hours, typically near weekends when we have more downtime to debug. 
 
-``
+```
 crontab -e
 ```
 
@@ -160,12 +160,16 @@ Pihole automatically logs what happens in the installer. However, I prefer to ke
 sudo touch /etc/default/pihole-updater-logs
 sudo nano /etc/default/pihole-updater
 ```
+
 Add these lines to the file: 
+
 ```
 echo $date
 pihole-up
 ```
+
 - adjusting the permissions
+
 ```
 sudo chmod +x /etc/default/pihole-updater
 sudo chown root:root /etc/default/pihole-updater
@@ -178,6 +182,7 @@ crontab -e
 ```
 
 Add the line: 
+
 ```
 0 3 * * SAT /etc/default/pihole-updater >> /etc/default/pihole-updater-logs
 ```
