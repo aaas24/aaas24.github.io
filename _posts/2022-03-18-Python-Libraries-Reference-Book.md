@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Common Python Libraries Refeerence Book"
+title:  "Python Libraries Refeerence Book"
 description: "Basic functions related to installing, configuring and using some common Python tools & Libraries"
 date:   2022-03-18
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
@@ -11,7 +11,7 @@ tags: [ python, analytics]
 
 # Project Description
 
-The intent of this post is to document basic functions related to installing, configuring and using a jupyter notebook. The content focuses on performing basic pre-processing commands to explore and analyze the data using python libraries such as pandas, pymysql and others. 
+The intent of this post is to document basic functions related to installing, configuring and using a jupyter notebook. The content focuses on performing basic preprocessing commands to explore and analyze the data using python libraries such as pandas, pymysql and others. 
 
 This file contains the notes related to the [Udemy Course - Python, SQL and Tableau Integration](https://www.udemy.com/course/python-sql-tableau-integrating-python-sql-and-tableau). The installation was done in a Proxmox VM running linux. 
 
