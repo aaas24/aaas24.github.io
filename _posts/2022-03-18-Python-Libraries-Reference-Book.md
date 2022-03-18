@@ -18,11 +18,11 @@ This file contains the notes related to the [Udemy Course - Python, SQL and Tabl
 ### TABLE OF CONTENT
 
 \
-    - [Anaconda](#anaconda) </br>
-    - [Jupyter Notebook](#jupyter-notebook) </br>
-    - [Pandas](#pandas) </br>
-    - [Numpy](#numpy) </br>
-    - [PyMySQL](#pymysql) </br>
+    - [Anaconda](#anaconda) <br>
+    - [Jupyter Notebook](#jupyter-notebook) <br>
+    - [Pandas](#pandas) <br>
+    - [Numpy](#numpy) <br>
+    - [PyMySQL](#pymysql) <br>
 
 
 <!-- no toc -->
