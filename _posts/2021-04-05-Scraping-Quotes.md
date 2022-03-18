@@ -21,6 +21,7 @@ Web scraping is an ethically debated practice. Many articles online argue what a
 
 > “A website that lists quotes from famous people. It has many endpoints showing the quotes in many different ways, each of them including new scraping challenges for you, as described below.” 
 
+### STEP 2 SET UP ENVIRONMENT 
 
 *  Create python environment
     virtualenv test_scraping
