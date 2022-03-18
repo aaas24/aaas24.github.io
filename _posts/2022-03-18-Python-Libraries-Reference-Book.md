@@ -5,8 +5,8 @@ description: "Basic functions related to installing, configuring and using some 
 date:   2022-03-18
 banner_preview: blog-350-250-raspberry-b&w.jpg
 banner_image: blog-1200-400-server-2021-11-22.jpg
-category: Technology
-tags: [ dataengineering, privacy]
+category: Coding
+tags: [ python, analytics]
 ---
 
 # Project Description
