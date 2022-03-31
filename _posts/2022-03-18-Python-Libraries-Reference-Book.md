@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python Libraries Refeerence Book"
+title:  "Python Libraries Reference Book"
 description: "Basic functions related to installing, configuring and using some common Python tools & Libraries"
 date:   2022-03-18
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
@@ -134,14 +134,18 @@ Using the max rows and columns option in panda you can configure a scroll window
 
     |Command |Syntax  | 
     --- | --- |
+    |Describe|`df.describe`|
     |Number of Rows and Columns|`df.shape`, where:<br>  `df.shape[0]`= rows & `df.shape[1]`= columns|
     |Names in Columns|`df.columns.values`|
+    |Column data types|`df.dtypes`|
     |Min|`df['COLUMN_NAME'].min()`|
     |Max|`df['COLUMN_NAME'].max()`|
     |Number of unique values|`len(df['COLUMN_NAME'].unique())`|
     |Sorted list of unique values|`sorted(df['COLUMN_NAME'].unique())`|
     |Identify type of value in a column|`type(df_reason_mod['COLUMN_NAME'][0])`|
-    |Count per value in column|`df.['COLUMN_NAME'].value_counts()`|
+    |Count per value in column|`df.['COLUMN_NAME'].value_counts(dropna=False)`|
+    |Traspose|`df.head().T`|
+    |View column with missing value in rows|`df.loc[df.COLUMN_NAME.isna(), ['COLUMN_NAME_1', 'COLUMN_NAME_2', 'COLUMN_NAME_3']]`|
     |||
 
 *  Operations with rows and columns
@@ -160,9 +164,23 @@ Using the max rows and columns option in panda you can configure a scroll window
     |Reclassify the values in a column|In a column with 4 distinct values, where we wish to combine 2,3 & 4 as B, and re-label 1 as A: `df['COLUMN_NAME']=df['COLUMN_NAME'].map({1:A,2:B,3:B,4:B})`|
     |Slice data with iloc|`df.iloc[START_ROW:END_ROW,START_COLUMN:END_COLUMN]`<br> Ex: `df.iloc[:,:-1]`, which is all rows, all columns but the last one|
     |Where|`df['COLUMN_NAME']= np.where(daf['COLUMN_NAMEs']>CONDITION,TRUE_VALUE,FALSE_VALUE)`|
+    |Filter data|`df[df['COLUMN_NAME']=='VALUE']`|
     |||
 
+* Useful codes snippets
 
+** Find Missing data
+
+For a dataFrame called 'df', this shows the 'percentage' of missing values per column, where there is in fact missing values detected by the '.isna()' function.
+
+``` python
+    ((df
+    .isna()
+    .mean()
+    *100)
+    .pipe(lambda ser:ser[ser>0])
+    )
+```
 # Numpy
 
 *  Statistical Operations
