@@ -160,11 +160,12 @@ Using the max rows and columns option in panda you can configure a scroll window
     |Concatenate multiple df|`df= pd.concat([df1,df2,df3,df4,...,dfn], axis=1)`|
     |Renaiming columns|1) get initial values with `column_names=df.columns.value`<br> 2) modify the name value in variable <br> 3) `df.columns=column_names`|
     |Reordering columns|1) get initial values with `colum_names_reordered=df.columns.value`<br> 2) modify order of values in variable <br> 3) `df=df[colum_names_reordered]`|
-    |Convert values in column to timestamp format. Ex, a column `DATE` with str such as 07/15/2018|`pd.to_datetime(df_reason_mod['Date'], format='%d/%m/%Y')` <br> The convension of the  `format` parameter is:<br> %d = Day<br> %m = Month<br> %Y = Year<br> %H = Hour<br> %M = Minute<br> %S = Second|
+    |Convert values in column to timestamp format. Ex, a column `DATE` with str such as 07/15/2018|`pd.to_datetime(df_reason_mod['Date'], format='%d/%m/%Y')` <br> The convension of the  `format` parameter, [see the 'strftime' documentation](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior)|
     |Reclassify the values in a column|In a column with 4 distinct values, where we wish to combine 2,3 & 4 as B, and re-label 1 as A: `df['COLUMN_NAME']=df['COLUMN_NAME'].map({1:A,2:B,3:B,4:B})`|
     |Slice data with iloc|`df.iloc[START_ROW:END_ROW,START_COLUMN:END_COLUMN]`<br> Ex: `df.iloc[:,:-1]`, which is all rows, all columns but the last one|
     |Where|`df['COLUMN_NAME']= np.where(daf['COLUMN_NAMEs']>CONDITION,TRUE_VALUE,FALSE_VALUE)`|
     |Filter data|`df[df['COLUMN_NAME']=='VALUE']`|
+    |Temporarily display more rows|`with pd.option_context('display.max_columns', 22, 'display.min_rows',10): display(df)`|
     |||
 
 * Useful codes snippets
