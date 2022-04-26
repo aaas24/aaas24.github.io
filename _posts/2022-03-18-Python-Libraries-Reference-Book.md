@@ -109,6 +109,14 @@ To see all running notebooks addresses:
 |Convert Markdown to code cell|Y|
 |||
 
+## Adding virtual environment to your kernel
+Change the NAME_OF_ENV in the following code with the name you want to use as reference:
+
+```shell
+conda activate NAME_OF_ENV
+ipython kernel install --name NAME_OF_ENV --user 
+```
+
 # Pandas
 
 ## Data Preprocessing Tips in Panda
