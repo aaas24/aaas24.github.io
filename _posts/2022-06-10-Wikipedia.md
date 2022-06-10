@@ -17,9 +17,7 @@ This project studies downloading the entire wikipedia data and how to quickly ob
 
 As a summary, here is my assessment of the libraries used: 
 
-1=Least -> 5= Most
-
-**For all data dump:**
+Scale used: 1=Least -> 5= Most
 
 |Concept|Wiki Dump Parser|Wiki Dump Reader
 |---------|------|------|
@@ -28,14 +26,13 @@ As a summary, here is my assessment of the libraries used:
 |Output Value|3|5|
 |||
 
-</br>
+
 
 Wikipedia does not allow web crawlers for downloading large number of articles. As stated in there [how-to download guide](https://en.wikipedia.org/wiki/Wikipedia:Database_download), Wikipedia servers would not be able to cope with the constant pressure of scrapping the entire site. However, they have made available copies of the site that you can download in different formats, the easiest would be the latest copy of the state of all the pages. This will be the method explored. 
 
-To follow along this project's code, please view [location](https://github.com/aaas24/code_library/tree/main/wikipedia)
+To follow along this project's code, please view [location](https://github.com/aaas24/code_library/tree/main/wikipedia).
 
-</br>
-</br>
+
 
 ### METHODOLOGY
 
@@ -119,8 +116,8 @@ Evaluated the [Wiki Dump Parser Library](https://github.com/Grasia/wiki-scripts/
 ```
 The resulting file shown below has several failed parsed rows while processing the text columns [page_title & contributor_name] that make it hard to utilize directly. However, with some data wrangling, one would think it could be possible to obtain a curated list of the page_id's and titles. However, it would be an interesting exercise to understand if one of the dump files contains this data pre-arranged, namely the "enwiki-****-all-titles.gz"
 
- <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_1.png" alt="Metadata Example" width="600">
+<p align="center">
+  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_1.png" alt="Metadata Example" width="80%">
 </p>
 
 * OBTAIN MARKUP
@@ -150,12 +147,11 @@ Evaluated the [Wiki Dump Reader Library](https://github.com/CyberZHG/wiki-dump-r
 The code above results in a clean file with many redirects rows, like this:  
 
 <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_2.png" alt="Metadata Example" width="300">
+  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_2.png" alt="Metadata Example" width="50%">
 </p>
 
 One potential improvement is to delete this REDIRECTS and, when failing to find a term, utilize the "enwiki-****-redirects.gz" file provided as part of the dumps to find a different title page
 
-</br>
 
 ### CONCLUSIONS
 
