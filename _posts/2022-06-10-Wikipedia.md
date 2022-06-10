@@ -20,6 +20,7 @@ As a summary, here is my assessment of the libraries used:
 1=Least -> 5= Most
 
 **For all data dump:**
+
 |Concept|Wiki Dump Parser|Wiki Dump Reader
 |---------|------|------|
 |Ease to install|4|4|
@@ -28,9 +29,13 @@ As a summary, here is my assessment of the libraries used:
 |||
 
 </br>
+
 Wikipedia does not allow web crawlers for downloading large number of articles. As stated in there [how-to download guide](https://en.wikipedia.org/wiki/Wikipedia:Database_download), Wikipedia servers would not be able to cope with the constant pressure of scrapping the entire site. However, they have made available copies of the site that you can download in different formats, the easiest would be the latest copy of the state of all the pages. This will be the method explored. 
 
 To follow along this project's code, please view [location](https://github.com/aaas24/code_library/tree/main/wikipedia)
+
+</br>
+</br>
 
 ### METHODOLOGY
 
@@ -53,15 +58,17 @@ To follow along this project's code, please view [location](https://github.com/a
             print(std_out.strip(), std_err)
         pass
 ```
+
+**Example:**
+
 ```
     runcmd("echo 'Hello World'", verbose = True)
 ```
 
-**Example:**
+
 
 ### DEPENDENCIES
 
-<span style="font-size:11px"> 
 
 PYTHON LIBRARIES
 
@@ -70,7 +77,6 @@ PYTHON LIBRARIES
     import numpy as np
     import os
 ```
-</span>
 
 SHELL PACKAGES: 
 
@@ -119,7 +125,7 @@ The resulting file shown below has several failed parsed rows while processing t
 
 * OBTAIN MARKUP
 
-Evaluated the [Wiki Dump Reader Library](https://github.com/CyberZHG/wiki-dump-reader)). 
+Evaluated the [Wiki Dump Reader Library](https://github.com/CyberZHG/wiki-dump-reader). 
 
 ```python
     from wiki_dump_reader import Cleaner, iterate
@@ -143,8 +149,8 @@ Evaluated the [Wiki Dump Reader Library](https://github.com/CyberZHG/wiki-dump-r
 
 The code above results in a clean file with many redirects rows, like this:  
 
- <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_2.png" alt="Metadata Example" width="600">
+<p align="center">
+  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_2.png" alt="Metadata Example" width="300">
 </p>
 
 One potential improvement is to delete this REDIRECTS and, when failing to find a term, utilize the "enwiki-****-redirects.gz" file provided as part of the dumps to find a different title page

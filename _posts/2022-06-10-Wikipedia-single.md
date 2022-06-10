@@ -17,7 +17,7 @@ This project studies ow to quickly obtain a single article information.
 
 As a summary, here is my assessment of the libraries used: 
 
-1=Least -> 5= Most
+Scale used: 1=Least -> 5= Most
 
 |Concept|Wikipedia|BeautifulSoup|Pandas|
 |---------|------|------|------|
@@ -27,6 +27,7 @@ As a summary, here is my assessment of the libraries used:
 |||
 
 </br>
+
 Wikipedia does not allow web crawlers for downloading large number of articles. As stated in there [how-to download guide](https://en.wikipedia.org/wiki/Wikipedia:Database_download), Wikipedia servers would not be able to cope with the constant pressure of scrapping the entire site. However, in the case that we do hold one specific url, there are different libraries that can be explored to assist in ths job, like pandas, beautifulsoup and more. I will focus on exploring each of these libraries as the second method explored to understand what each library has to offer. 
 
 To follow along this project's code, please view [location](https://github.com/aaas24/code_library/tree/main/wikipedia)
@@ -45,53 +46,53 @@ PYTHON LIBRARIES
 </span>
 
 
-###  WIKIPEDIA LIBRARY 
+###  USING [WIKIPEDIA LIBRARY](https://pypi.org/project/wikipedia/)
 
-#### **Search**
+#### **Search FUNCTIONALITY**
 
 Assuming that we have a subject, which is a collection of words or terms we are looking for, this library hasa great search option. As an example, we will use the value:     
 
-``` subject='ted talk speakers' 
+``` 
+subject='ted talk speakers 
 ```
 
 ```python
-
     # To obtain a search on the subject:
     import wikipedia
 
     search_result = wikipedia.search(subject)
     print('the search result is:')
     print(search_result)
-    result=search_result[1] # this selects the first option of the tuple, which is the desired outcome in our case. You need to adapt this to your use case 
+    result=search_result[1]
     print('')
     print('the selected page is:', result)
 ```
 
- <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_3.png" alt="Search" width="600">
+<p align="center">
+  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_3.png" alt="Search" width="100%">
 </p>
 
-To obtain a URL base on the search result
+Note that in the above code when we select the second value in the search results (In: result=search_result[1]) which is the desired outcome in our case. You need to adapt this to your use case To obtain a URL base on the search result
 
-<span style="font-size:11px"> 
+
 
 ```python
     url=(result).replace(" ", "_")
     url= 'https://en.wikipedia.org/wiki/'+ url
     print(url)
 ```
-</span> 
+
 
 #### **Article Information**
 
 Once you obtain the targeted URL, you can call the attributes title, summary, categories, etc.
 
-<span style="font-size:11px"> 
 
 ```python
     result=wikipedia.page(result)
 
     #parse attributes library provides
+
     title=result.title
     summary = result.summary
     categories=result.categories
@@ -101,6 +102,7 @@ Once you obtain the targeted URL, you can call the attributes title, summary, ca
     html=result.html()
 
     # print info
+
     print("Page content:\n", content, "\n")
     print("Page title:", title, "\n")
     print("Categories:", categories, "\n")
@@ -108,9 +110,8 @@ Once you obtain the targeted URL, you can call the attributes title, summary, ca
     print("References:", references, "\n")
     print("Summary:", summary, "\n")
 ```
-</span> 
 
-For an example of the outputs, this [notebook](https://github.com/aaas24/code_library/blob/main/ted_talks/4_enhance_authors/Authors.ipynb)
+For an example of the outputs, this [notebook](https://github.com/aaas24/code_library/blob/main/ted_talks/4_enhance_authors/Authors.ipynb).
 
 
 ###  BEAUTIFUL SOUP
@@ -149,8 +150,8 @@ For example, if we wanted to extract a list of authors from this html:
             [6:] #remove first 6 values that do not correspond to authors or talks
             )
 ```
- <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_4.png" alt="Authors Example" width="600">
+<p align="center">
+  <img src="https://github.com/aaas24/code_library/raw/main/wikipedia/images/wiki_4.png" alt="Authors Example" width="80%">
 </p>
 
 * Using Regex
@@ -170,7 +171,7 @@ For example, if we wanted to extract a list of authors from this html:
     for line in result:
         print (line) 
 ```
-For a more detailed example on regex use, please see this [notebook](https://github.com/aaas24/code_library/blob/main/ted_talks/4_enhance_authors/Authors.ipynb)
+For a more detailed example on regex use, please see this [notebook](https://github.com/aaas24/code_library/blob/main/ted_talks/4_enhance_authors/Authors.ipynb).
 
 ###  PANDAS
 
@@ -183,7 +184,6 @@ It's almost obvious but still important to call out how easy panda makes this:
     print(html)
 ```
 
-</br>
 
 ### CONCLUSIONS
 
@@ -200,4 +200,5 @@ Scale: 1=Least -> 5= Most
 |Ease to install|4|3|5|
 |Ease to use|5|3|5|
 |Flexibility|4|5|3|
+
 
