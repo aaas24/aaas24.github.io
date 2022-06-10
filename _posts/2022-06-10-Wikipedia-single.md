@@ -26,15 +26,14 @@ Scale used: 1=Least -> 5= Most
 |Flexibility|4|5|3|
 |||
 
-</br>
+
 
 Wikipedia does not allow web crawlers for downloading large number of articles. As stated in there [how-to download guide](https://en.wikipedia.org/wiki/Wikipedia:Database_download), Wikipedia servers would not be able to cope with the constant pressure of scrapping the entire site. However, in the case that we do hold one specific url, there are different libraries that can be explored to assist in ths job, like pandas, beautifulsoup and more. I will focus on exploring each of these libraries as the second method explored to understand what each library has to offer. 
 
-To follow along this project's code, please view [location](https://github.com/aaas24/code_library/tree/main/wikipedia)
+To follow along this project's code, please view [location](https://github.com/aaas24/code_library/tree/main/wikipedia).
 
 ### DEPENDENCIES
 
-<span style="font-size:11px"> 
 
 PYTHON LIBRARIES
 
@@ -43,7 +42,7 @@ PYTHON LIBRARIES
     import numpy as np
     import os
 ```
-</span>
+
 
 
 ###  USING [WIKIPEDIA LIBRARY](https://pypi.org/project/wikipedia/)
@@ -53,7 +52,7 @@ PYTHON LIBRARIES
 Assuming that we have a subject, which is a collection of words or terms we are looking for, this library hasa great search option. As an example, we will use the value:     
 
 ``` 
-subject='ted talk speakers 
+subject='ted talk speakers' 
 ```
 
 ```python
