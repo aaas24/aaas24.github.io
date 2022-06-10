@@ -15,9 +15,9 @@ I wanted to find a small project of something fun to practice python web scrappi
 <!--more-->
 To follow along this project, I've made a copy of the code in this [location](https://github.com/aaas24/aaas24.github.io/tree/master/assets/post_files/2021-04-05-Scraping-Quotes)
 
-### STEP 1 CHOSSING A WEBSITE 
+### STEP 1 CHOOSING A WEBSITE 
 
-Web scraping is an ethically debated practice. Many articles online argue what are the greylines and, although the purpose of this post is not to go deep into that discussion, it is something I had to evaluate when considering what to use in my practice. Luckly, the tech community has many valuable open assets. One that I found was the website: http://toscrape.com, which has a particular website for quotes, as it clearly states it: 
+Web scraping is an ethically debated practice. Many articles online argue what are the greylines and, although the purpose of this post is not to go deep into that discussion, it is something I had to evaluate when considering what to use in my practice. Luckily, the tech community has many valuable open assets. One that I found was the website: http://toscrape.com, which has a particular website for quotes, as it clearly states it: 
 
 > “A website that lists quotes from famous people. It has many endpoints showing the quotes in many different ways, each of them including new scraping challenges for you, as described below.” 
 
@@ -109,7 +109,7 @@ def tag_list(tag,tagclass):
 
 def merge_lists(list1,list2):
     """
-    This function ebuilds and returns a dictionary constructed on merging two lists
+    This function builds and returns a dictionary constructed on merging two lists
     """
     newDic = {list1[i]: list2[i] for i in range(len(list1))}
     return newDic
@@ -130,7 +130,7 @@ The resulting dictionary can be converted into a data frame with the panda libra
 
 Although this is a simple project, it was a great introduction to the BeautifulSoup library and helped poised questions like. 
 
-In more robust scenarios, it would be interesting to build something that can handle server errors and allow users to test the tags with simple inputs. this would also require error handling on the data provided by the users, but it shows the wonderful possibilities that this proyect has for future questions. 
+In more robust scenarios, it would be interesting to build something that can handle server errors and allow users to test the tags with simple inputs. this would also require error handling on the data provided by the users, but it shows the wonderful possibilities that this project has for future questions. 
 
 Sense I worked with quotes, I am sharing my favorite one from this little project:
 
