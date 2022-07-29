@@ -11,7 +11,17 @@ tags: [python, dataengineering, dummies]
 
 TED Talks is a fascinating source of content. Kaggle offers a dataset on TED Talks posted on the website. As a TED Talk fan, I wanted to understand the type of resources available.
 
-This is the **second** article in a series of a larger project that includes several data science techniques, including: scrapping a website, data wrangling, data classification techniques (PCA and clustering) and Machine Learning techniques. To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
+This is the **second** article in a series of a larger project that includes several data science techniques, including: scrapping a website, data wrangling, data classification techniques (PCA and clustering) and Machine Learning techniques. Here are the links to all the articles in this series: 
+
+* [1 - Web Scrapping](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-1-web-scraping.html)
+* [2 - Preprocessing](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-2-Preprocessing.html)
+* [3 - PCA and Clustering](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-3-PCA-and-Clustering.html)
+* [4 - Predicting Performing Models](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-4-ML-Predicting-Performing-Videos.html)
+* [5 - Recommendation Engine](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-5-ML-Recommendation-Engine.html)
+
+
+
+To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
 
 
 
@@ -28,12 +38,13 @@ With a more robust dataset obtained in the [previous article](https://aaas24.git
 
  With final data joined dataset, we proceed to apply data processing steps, including: 
 
-        - Dropped duplicated or useless columns: 'description2', 'Unnamed: 0', 'link', 'author_y', 'title','url', 'title_1'
+- Dropped duplicated or useless columns: 'description2', 'Unnamed: 0', 'link', 'author_y', 'title','url', 'title_1'
 
-        - Converted to datetime date_recorded and date_released columns, extracting YEAR, MONTH, HOUR & MINUTES into numerical columns to be able to feed it into Machine Learning models later
+- Converted to datetime date_recorded and date_released columns, extracting YEAR, MONTH, HOUR & MINUTES into numerical columns to be able to feed it into Machine Learning models later
 
-        - Remove lists from keywords column in order to later applied get_dummies() panda function. 
-        This step was particularly tricky for me. The original column looks like this: 
+- Remove lists from keywords column in order to later applied get_dummies() panda function. 
+
+This step was particularly tricky for me. The original column looks like this: 
 
 
 ```shell
@@ -96,9 +107,10 @@ The result of this function is:
 1) A dataFrame 'df' with the main data structure to be later processed. 
 
 
-||author|	views|	likes|	title|	description_1|	duration_seg|	description_2|	date_recorded_year|	date_recorded_month|	date_released_year|	...	|'water'|	'weather'|	'windenergy'|	'women'|	'womeninbusiness'|	'work'|	'work-lifebalance'|	'writing'|	'youth'|	'ted'|
+|index|author|	views|	likes|	title|	description_1|	duration_seg|	description_2|	date_recorded_year|	date_recorded_month|	date_released_year|	...	|'water'|	'weather'|	'windenergy'|	'women'|	'womeninbusiness'|	'work'|	'work-lifebalance'|	'writing'|	'youth'|	'ted'|
 |--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
 0|	Ozawa Bineshi Albert|	404000|	12000|	Climate action needs new frontline leadership|	"We can't rely on those who created climate ch...|	834|	"We can't rely on those who created climate ch...|	2021|	12|	2022|	...|	0|	0|	0|	0|	0|	0|	0|	0|	0|	1|
+
 Dataframe named: df 
 
 
@@ -123,16 +135,17 @@ Utilized thus matrix, I transformed the  'keywords.csv' into a dataframe with th
 
 
 
- |       	|sub_category|	num_talks|	category|	        likes|	views|
+ |index|sub_category|	num_talks|	category|	        likes|	views|
  |--|--|--|--|--|--|
  |       0	|'3dprinting'|	9|	        technology|	        201574|	6655100|
  |       1|	'activism'|	352|	        values & emotions  |     21752759| 714057797|
  |       2|	'addiction'|	20|	        health	  |              1870500|	60982000|
  |       3|	'africa'|	197|	        global	  |              9097799|	299541000|
  |       4|	'aging'	 |       93|	        society	  |              8152092|	269034199|
+ 
  Dataframe named: df_dummies
 
 
 ### NEXT STEP
 
-Please read the next article of this series on [PCA and Clustering](https://aaas24.github.io/coding/2022/04/05/2022-04-05-Ted-Talks-3-PCA-and-Clustering.html)
+Please read the next article of this series on [PCA and Clustering](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-3-PCA-and-Clustering.html)

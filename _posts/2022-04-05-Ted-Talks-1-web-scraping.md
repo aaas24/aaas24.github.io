@@ -11,7 +11,17 @@ tags: [python, dataengineering, web scrapping]
 
 TED Talks is a fascinating source of content. Kaggle offers a dataset on TED Talks posted on the website. As a TED Talk fan, I wanted to understand the type of resources available.
 
-This is the **first** article in a series of a larger project that includes several data science techniques, including: scrapping a website, data wrangling, data classification techniques (PCA and clustering) and Machine Learning techniques. To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
+This is the **first** article in a series of a larger project that includes several data science techniques, including: scrapping a website, data wrangling, data classification techniques (PCA and clustering) and Machine Learning techniques. Here are the links to all the articles in this series: 
+
+* [1 - Web Scrapping](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-1-web-scraping.html)
+* [2 - Preprocessing](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-2-Preprocessing.html)
+* [3 - PCA and Clustering](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-3-PCA-and-Clustering.html)
+* [4 - Predicting Performing Models](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-4-ML-Predicting-Performing-Videos.html)
+* [5 - Recommendation Engine](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-5-ML-Recommendation-Engine.html)
+
+
+
+To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
 
 
 
@@ -23,7 +33,7 @@ This is the **first** article in a series of a larger project that includes seve
 Kaggle offers a dataset on TED Talks posted on the website. The data has been uploaded to a Dataframe.Looking at a brief set of the data: 
 
  <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted-talk-1.png" alt="Data Exploration" width="600">
+  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted-talk-1.png" alt="Data Exploration" width="80%">
 </p>
 
 From this general view, we can immediately ask some general questions, like:
@@ -104,4 +114,4 @@ The final joined data was stored in a file [here.]('https://github.com/aaas24/co
 
 ### NEXT STEP
 
-Please read the next article of this series, [here](https://aaas24.github.io/coding/2022/04/05/2022-04-05-Ted-Talks-2-Preprocessing.html)
+Please read the next article of this series on preprocessing the data, [here](https://aaas24.github.io/coding/2022/04/05/Ted-Talks-2-Preprocessing.html)
