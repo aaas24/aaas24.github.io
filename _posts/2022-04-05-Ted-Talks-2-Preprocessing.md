@@ -21,7 +21,7 @@ This is the **second** article in a series of a larger project that includes sev
 
 
 
-To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
+To learn more about the full code on this project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks). You can also use this [Colab notebook](https://colab.research.google.com/drive/1hUwgmZU4HxKneeYMSu3fqX_Qs7ppFBUU?usp=sharing) to follow along. 
 
 
 
@@ -107,14 +107,6 @@ The result of this function is:
 1) A dataFrame 'df' with the main data structure to be later processed. 
 
 
-|index|author|	views|	likes|	title|	description_1|	duration_seg|	description_2|	date_recorded_year|	date_recorded_month|	date_released_year|	...	|'water'|	'weather'|	'windenergy'|	'women'|	'womeninbusiness'|	'work'|	'work-lifebalance'|	'writing'|	'youth'|	'ted'|
-|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
-0|	Ozawa Bineshi Albert|	404000|	12000|	Climate action needs new frontline leadership|	"We can't rely on those who created climate ch...|	834|	"We can't rely on those who created climate ch...|	2021|	12|	2022|	...|	0|	0|	0|	0|	0|	0|	0|	0|	0|	1|
-
-Dataframe named: df 
-
-
-
 2)  A 'keywords.csv' file containing a list of keywords and number of times it appears in the data, example: 
 
 
@@ -129,14 +121,14 @@ Dataframe named: df
                 
 * Create Dummy DataFrame
 
-There are 334 keywords, which we will call sub_categories of content. In order to analyze them, we need to consolidate them into bigger buckets. For that reason, I created a one:many relationship between new categories:sub_categories, in order to group the latter into bigger buckets of content that we can understand better. This categorization was done separately and stored in a file called 'keywords_categories.csv'
+There are 334 keywords, which we will call sub_categories of content. In order to analyze them, we need to consolidate them into bigger buckets. For that reason, I created a one:many relationship between new categories:sub_categories, in order to group the latter into bigger buckets of content that we can understand better. This categorization was done separately and stored in a file called **'keywords_categories.csv'**.
 
-Utilized thus matrix, I transformed the  'keywords.csv' into a dataframe with the following structure: 
+Utilized this matrix, I transformed the  'keywords.csv' into a dataFrame with the following structure: 
 
 
 
  |index|sub_category|	num_talks|	category|	        likes|	views|
- |--|--|--|--|--|--|
+ |:--:|:--:|:--:|:--:|:--:|:--:|
  |       0	|'3dprinting'|	9|	        technology|	        201574|	6655100|
  |       1|	'activism'|	352|	        values & emotions  |     21752759| 714057797|
  |       2|	'addiction'|	20|	        health	  |              1870500|	60982000|

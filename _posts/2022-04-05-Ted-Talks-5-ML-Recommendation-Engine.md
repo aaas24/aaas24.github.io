@@ -21,7 +21,7 @@ This is the **last** article in a series of a larger project that includes sever
 
 
 
-To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
+To learn more about the full code on this project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks). You can also use this [Colab notebook](https://colab.research.google.com/drive/1hUwgmZU4HxKneeYMSu3fqX_Qs7ppFBUU?usp=sharing) to follow along. 
 
 
 
@@ -93,7 +93,7 @@ To learn more about the code and the project, please visit the [code library](ht
 
 
 ``` python
-        #selet talk
+        #select talk
         talk_liked='Can machines read your emotions?'
 
 
@@ -104,7 +104,7 @@ To learn more about the code and the project, please visit the [code library](ht
 
 
 <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_models_rc1.png" alt="" width="40%">
+  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_models_rc1.png" alt="" width="30%">
 </p>
 
 

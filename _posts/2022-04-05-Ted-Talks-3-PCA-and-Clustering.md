@@ -21,7 +21,7 @@ This is the **third** article in a series of a larger project that includes seve
 
 
 
-To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
+To learn more about the full code on this project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks). You can also use this [Colab notebook](https://colab.research.google.com/drive/1hUwgmZU4HxKneeYMSu3fqX_Qs7ppFBUU?usp=sharing) to follow along. 
 
 
 
@@ -71,7 +71,7 @@ Even through the dataset is intuitively simple to understand, I wanted to practi
 
 
 <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_pca_1.png" alt="PC1 & PC2" width="600">
+  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_pca_1.png" alt="PC1 & PC2" width="80%">
 </p>
 
 ### CLUSTERING 
@@ -87,13 +87,12 @@ The second method is the Silouhettes, where the shapes of the clusters do show a
 The third method using a dendrogram is even more clear: there is a significant increase in clusters after the 4 column. This perhaps is the clearest confirmation of our assumption 
 
 
-<div align="center">
 
 |Elbow Method|Silouettes Method|Dendrogram Method|
-|---------|------|-----|
-|<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_1.png" alt="PC1 & PC2" width="100%"> | <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_2.png" alt="PC1 & PC2" width="100%"> |<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_3.png" alt="PC1 & PC2" width="100%">|
+|:---------:|:------:|:-----:|
+|<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_1.png" alt="PC1 & PC2" width="33%"> | <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_2.png" alt="PC1 & PC2" width="33%"> |<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_3.png" alt="PC1 & PC2" width="33%">|
 |||
-</div>
+
 
 ### 2) Assigning the clusters
 
@@ -153,6 +152,15 @@ The third method using a dendrogram is even more clear: there is a significant i
   <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_4.png" alt="Data Exploration" width="600">
 </p>
 
+
+4) Describing the clusters
+
+With the information provided above, we can describe the cluster as follows:
+
+0 - Newer videos released in fall 
+1 - Newer videos released in earlier in the year 
+2 - Older videos, longer duration in seg 
+3 - Highest views & likes
 
 ### NEXT STEP
 

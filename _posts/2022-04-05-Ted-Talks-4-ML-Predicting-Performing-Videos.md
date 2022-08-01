@@ -21,7 +21,7 @@ This is the **fourth** article in a series of a larger project that includes sev
 
 
 
-To learn more about the code and the project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks)
+To learn more about the full code on this project, please visit the [code library](https://github.com/aaas24/code_library/tree/main/ted_talks). You can also use this [Colab notebook](https://colab.research.google.com/drive/1hUwgmZU4HxKneeYMSu3fqX_Qs7ppFBUU?usp=sharing) to follow along. 
 
 
 
@@ -34,16 +34,14 @@ The goal is to predict a "good performance" for a given video, when we are defin
 
 We run 4 different models:
 
-<div align="center">
 
 |Model|Y_Prediction|
-|--|--|
+|:--|:--:|
 |Logistic Regression|0.61|
 |Simple Tree|0.61|
 |Random Forest|0.67|
 |X-Boost|0.67|
 
-</div>
 
 Based on the Best Performing Models "XG-Boost", the key features are: 
 
@@ -175,7 +173,6 @@ Note: For readability purposes we show the output of Jupyter notebook staring wi
 ##### Comparing Models
 
 
-
 ``` python
         def create_roc_plot(name, predictions):
         if name == 'Logistic':
@@ -200,7 +197,6 @@ Note: For readability purposes we show the output of Jupyter notebook staring wi
         create_roc_plot('XGBoost', pred_xgb)
 ```
 
-<div align="center">
 
 |Logistic Regression|Simple Decision Tree|
 |---------|------|
@@ -209,7 +205,7 @@ Note: For readability purposes we show the output of Jupyter notebook staring wi
 |Random Forest|XGBoost|
 |---------|------|
 |<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_model_3.png" alt="Random Forest" width="100%"> | <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_model_4.png" alt="XGBoost" width="100%"> |
-</div>
+
 
 Given that Random Forest & XGBoost tends to outperform the other models, let's see the Feature importance on these two models: 
 
@@ -277,11 +273,10 @@ Given that Random Forest & XGBoost tends to outperform the other models, let's s
 
 
 
-Based on these features, we can identify some keywords and variables. 
+Based on these features, we can identify some keywords and variables that are worth analyzing further. 
 
-1- Regarding Variables:
 
-        Understanding date_recorded_year &  date_released_year
+#### Understanding date_recorded_year &  date_released_year
 
 
 
@@ -290,8 +285,6 @@ Based on these features, we can identify some keywords and variables.
         df_graph=df2.loc[:,['date_released_year', 'target']]
         dfgraph_y=df_graph[df_graph.target==1]
         dfgraph_n=df_graph[df_graph.target==0]
-
-
 
         #improving graph
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(13,5), sharex=True)
@@ -323,7 +316,7 @@ Based on these features, we can identify some keywords and variables.
   <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_models_fc5.png" alt="Data Exploration" width="600">
 </p>
 
-        Understanding date_released_month
+#### Understanding date_released_month
 
 
 
