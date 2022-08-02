@@ -71,7 +71,7 @@ Even through the dataset is intuitively simple to understand, I wanted to practi
 
 
 <p align="center">
-  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_pca_1.png" alt="PC1 & PC2" width="80%">
+  <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_pca_1.png" alt="PC1 & PC2" width="100%">
 </p>
 
 ### CLUSTERING 
@@ -90,7 +90,7 @@ The third method using a dendrogram is even more clear: there is a significant i
 
 |Elbow Method|Silouettes Method|Dendrogram Method|
 |:---------:|:------:|:-----:|
-|<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_1.png" alt="PC1 & PC2" width="33%"> | <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_2.png" alt="PC1 & PC2" width="33%"> |<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_3.png" alt="PC1 & PC2" width="33%">|
+|<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_1.png" alt="PC1 & PC2" width="100%"> | <img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_2.png" alt="PC1 & PC2" width="100%"> |<img src="https://github.com/aaas24/code_library/raw/main/ted_talks/images/ted_talks_clustering_3.png" alt="PC1 & PC2" width="100%">|
 |||
 
 
@@ -158,8 +158,11 @@ The third method using a dendrogram is even more clear: there is a significant i
 With the information provided above, we can describe the cluster as follows:
 
 0 - Newer videos released in fall 
+
 1 - Newer videos released in earlier in the year 
+
 2 - Older videos, longer duration in seg 
+
 3 - Highest views & likes
 
 ### NEXT STEP
