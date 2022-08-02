@@ -10,14 +10,14 @@ tags: [ dataengineering, privacy]
 ---
 
 # Project Description
-This document describes the steps taken to secure the DNS connection with incryption by using DNS-Over-HTTPS proxy functionality offered by Cloudflared. 
+This document describes the steps taken to secure the DNS connection with encryption by using DNS-Over-HTTPS proxy functionality offered by Cloudflared. 
 
 As stated in the [pi-hole documentation](https://docs.pi-hole.net/guides/dns/cloudflared/?h=update#automating-cloudflared-updates): "With standard DNS, requests are sent in plain-text, with no method to detect tampering or misbehavior. This means that not only can a malicious actor look at all the DNS requests you are making (and therefore what websites you are visiting), they can also tamper with the response and redirect your device to resources in their control (such as a fake login page for internet banking).
 
 DNS-Over-HTTPS prevents this by using standard HTTPS requests to retrieve DNS information. This means that the connection from the device to the DNS server is secure and can not easily be snooped, monitored, tampered with or blocked. It is worth noting, however, that the upstream DNS-Over-HTTPS provider will still have this ability."
 
 
-This project is a follow up from our [installation of pihole in a RasberryPi 4](https://aaas24.github.io/technology/2021/11/20/Pi-hole.html). The steps are based on Pi-hole Documentation described [here](https://docs.pi-hole.net/guides/dns/cloudflared/?h=update#automating-cloudflared-updates)
+This project is a follow up from our [installation of pihole in a RaspberryPi 4](https://aaas24.github.io/technology/2021/11/20/Pi-hole.html). The steps are based on Pi-hole Documentation described [here](https://docs.pi-hole.net/guides/dns/cloudflared/?h=update#automating-cloudflared-updates)
 
 #### System Description 
 ```
@@ -31,11 +31,11 @@ pihole -v
 
 Given that we installed 64-bit Raspberry Pi, we  follow the instructions for that OS: 
 
-```
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64
-sudo cp ./cloudflared-linux-arm64 /usr/local/bin/cloudflared
-sudo chmod +x /usr/local/bin/cloudflared
-cloudflared -v
+```bash
+  wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64
+  sudo cp ./cloudflared-linux-arm64 /usr/local/bin/cloudflared
+  sudo chmod +x /usr/local/bin/cloudflared
+  cloudflared -v
 ```
 
 #### 1.2) Configuring cloudflared to run on startup (manually)
@@ -51,7 +51,7 @@ Proceed to create a configuration file for cloudflared:
 Edit configuration file by copying the following in to /etc/default/cloudflared. This file contains the command-line options that get passed to cloudflared on startup:
 
 ``` bash
-# Commandline args for cloudflared, using Cloudflare DNS
+# Command line args for cloudflared, using Cloudflare DNS
 CLOUDFLARED_OPTS=--port 5053 --upstream https://1.1.1.1/dns-query --upstream https://1.0.0.1/dns-query
 ```
 
@@ -97,7 +97,7 @@ sudo systemctl status cloudflared
 Finally, configure Pi-hole to use the local cloudflared service as the upstream DNS server by logging into the Web Console, selecting "Settings" in the left panel, clicking on "DNS" on the tabs and specifying 127.0.0.1#5053 as the Custom DNS (IPv4), as shown in the image:
 
 <p align="center">
-  <img src="https://github.com/aaas24/aaas24.github.io/blob/master/assets/post_files/2021-12-02-Configuring-DNS-Over-HTTPS-in-Pi-hole/configuring-Upstream-DNS-Servers.jpg" alt="Upstream DNS Servers" width="600">
+  <img src="https://github.com/aaas24/aaas24.github.io/raw/main/assets/post_files/2021-12-02-Configuring-DNS-Over-HTTPS-in-Pi-hole/configuring-Upstream-DNS-Servers.jpg" alt="Upstream DNS Servers" width="600">
 </p>
 
 When trying to click saved the console threw out an error stating: 
