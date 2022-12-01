@@ -13,20 +13,19 @@ tags: [ python, analytics]
 
 The intent of this post is to document basic functions related to analyzing data using DataFrames. 
 
+<!--more-->
+
 ### TABLE OF CONTENT
 
 \
-    - [Filtering Data](#filtering-data) <br>
-    - [Jupyter Notebook](#jupyter-notebook) <br>
-
-
-<!-- no toc -->
-
+    - [Filtering Data Operations](##filtering-data-Operations) <br>
+    - [Chaining examples](#chaining-xamples-of-filering-data) <br>
 
 
 # Dataframes Common Data Operations
 
 ## Filtering Data Operations
+
 |Operation|Example Code|
 |--|--|
 |With AND Condition|df[(df.state=='Texas') & (df.year==1990)]|
