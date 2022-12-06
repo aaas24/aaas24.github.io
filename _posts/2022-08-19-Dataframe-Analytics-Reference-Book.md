@@ -19,10 +19,11 @@ The intent of this post is to document basic functions related to analyzing data
 
 \
     - [Filtering Data Operations](##filtering-data-Operations) <br>
-    - [Chaining examples](#chaining-xamples-of-filering-data) <br>
+    - [Chaining examples](#chaining-examples) <br>
+    - [Dictionary Operations](#dictionary-operations) <br>
 
 
-# Dataframes Common Data Operations
+# Dataframes Operations
 
 ## Filtering Data Operations
 
@@ -38,7 +39,7 @@ The intent of this post is to document basic functions related to analyzing data
 </br>
 </br>
 
-# Chaining examples of filtering data
+## Chaining Examples
 
 <table>
 <tr>
@@ -52,35 +53,72 @@ The intent of this post is to document basic functions related to analyzing data
         See a code example <a href="https://github.com/aaas24/code_library/tree/main/us_mass_shootings">this</a> workbook.
     </td>
     <td style="font-size: 8px">
-
-```python
-data=(df2
-    [df2.date.dt.year==2017]
-    .groupby(df2.state)
-    .agg(
-        tot_victims=pd.NamedAgg(column="victims", aggfunc="sum"),
-        num_incidents=pd.NamedAgg(column="incident_id", aggfunc="count")
-    )
-    .sort_values(by='tot_victims', ascending=False)
-    .reset_index()
-)
-```
-</td>
+        ```python
+        data=(df2   
+            [df2.date.dt.year==2017]
+            .groupby(df2.state)
+            .agg(
+                tot_victims=pd.NamedAgg(column="victims", aggfunc="sum"),
+                num_incidents=pd.NamedAgg(column="incident_id", aggfunc="count")
+            )
+            .sort_values(by='tot_victims', ascending=False)
+            .reset_index()
+        )
+        ```
+    </td>
 </tr>
-
 <!--Copy the section below to add another row
 <tr>
     <td> 
         Examples 
     </td>
     <td style="font-size: 8px">
-
-```python
-data
-``` 
-</td>
+        ```python
+        data
+        ``` 
+    </td>
 </tr>
 -->
 
+# Dictionary Operations
 
+</table>
+
+<table>
+<tr>
+    <td> 
+        Removing outer layer of dictionary
+    </td>
+    <td style="font-size: 8px">
+
+        ```python
+        dict_sub_region=(
+            data.loc[:,['state','subregion']]
+            .set_index('state')
+            .set_axis(['sub_region'], axis = 1)#renaming columns
+            .to_dict()
+        )
+        ``` 
+
+        this printed a dictionary like this: 
+
+        ```
+        {'sub_region': {'AK': 'Pacific',
+        'AL': 'East South Central',
+        'AR': 'West South Central',
+        'AZ': 'Mountain',
+        'CA': 'Pacific',
+        'CO': 'Mountain',
+        (...)}}
+        ```
+
+        To remove 'sub_region', we use: 
+
+        ```python
+        from collections import ChainMap
+        res = dict(ChainMap(*dict_sub_region.values()))#removes top level of dictionary
+        print(res)
+        ```
+    </td>
+</tr>
 </table>
