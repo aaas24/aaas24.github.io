@@ -67,7 +67,21 @@ The intent of this post is to document basic functions related to analyzing data
         ```
     </td>
 </tr>
-
+<tr>
+    <td> 
+        Renaming Columns With .set_axis()
+    </td>
+    <td style="font-size: 8px">
+        ```python
+        dict_sub_region=(
+        data.loc[:,['state','subRegion']]
+            .set_index('state')
+            .set_axis(['sub_region'], axis = 1) #renaming columns
+            .to_dict()
+        )
+        ``` 
+    </td>
+</tr>
 <tr>
     <td> 
         Catching Current State of a DataFrame during Method Chaining 
