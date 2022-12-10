@@ -9,7 +9,7 @@
 title: "AAAS24"
 
 # A description of your site for social meta tag, search engines, and feed.xml
-description: "Personal blog."
+description: "Personal website."
 
 
 # The subpath of your site, e.g. /blog, for generating urls
@@ -19,7 +19,7 @@ sass:
   sass_dir: _sass
 
 # The base hostname & protocol of your site for where absolute urls are needed
-url: "https://aaas24.github.io"
+url: "https://web.aaas24.io"
 
 # The shortname for your Disqus site to enable comments.
 disqus:
