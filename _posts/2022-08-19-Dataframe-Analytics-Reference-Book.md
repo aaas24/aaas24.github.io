@@ -29,15 +29,12 @@ The intent of this post is to document basic functions related to analyzing data
 
 |Operation|Example Code|
 |--|--|
-|With AND Condition|df[(df.state=='Texas') & (df.year==1990)]|
-|With OR Condition|df[(df.state=='Texas') | (df.year==1990)]|
-|With != Column Names Nomenclature|df[df.state=='Texas'] or df[df['state']=='Texas']|
-|With a list_of_values|data_filtered=df[df.column_Name.isin(list_of_values)]|
-|Using 'query'|df.query('colum_Name>=5 and colum_Name<=10')|
-
-</br>
-</br>
-</br>
+|With AND Condition   |`df[(df.state=='Texas') & (df.year==1990)]`|
+|With OR Condition   |`df[(df.state=='Texas') | (df.year==1990)]`|
+|With != Column Names Nomenclature   |`df[df.state=='Texas'] or df[df['state']=='Texas']`|
+|With a list_of_values   |`data_filtered=df[df.column_Name.isin(list_of_values)]`|
+|Using 'query'   |`df.query('colum_Name>=5 and colum_Name<=10')`|
+|||
 
 ## Chaining Examples
 
@@ -45,69 +42,72 @@ The intent of this post is to document basic functions related to analyzing data
 <tr>
 <td> Operation </td> <td> Example Code </td>
 </tr>
-
+<tr><td></td><td></td></tr>
 <tr>
-    <td> Groupby & Aggregations Controlling Column Name by Using 'pd.NamedAgg'.
-        </br>
-        </br>
-        See a code example <a href="https://github.com/aaas24/code_library/tree/main/us_mass_shootings">this</a> workbook.
+    <td> Groupby & Aggregations Controlling Column Name by Using 'pd.NamedAgg'
     </td>
-    <td style="font-size: 8px">
-        ```python
-        data=(df2   
-            [df2.date.dt.year==2017]
-            .groupby(df2.state)
-            .agg(
-                tot_victims=pd.NamedAgg(column="victims", aggfunc="sum"),
-                num_incidents=pd.NamedAgg(column="incident_id", aggfunc="count")
-            )
-            .sort_values(by='tot_victims', ascending=False)
-            .reset_index()
-        )
-        ```
+    <td>
+        <pre> See a code example <a href="https://github.com/aaas24/code_library/tree/main/us_mass_shootings">this</a> workbook.
+            <code>
+                data=(df2   
+                    [df2.date.dt.year==2017]
+                    .groupby(df2.state)
+                    .agg(
+                        tot_victims=pd.NamedAgg(column="victims", aggfunc="sum"),
+                        num_incidents=pd.NamedAgg(column="incident_id", aggfunc="count")
+                    )
+                    .sort_values(by='tot_victims', ascending=False)
+                    .reset_index()
+                )
+            </code>
+        <pre>
     </td>
 </tr>
 <tr>
     <td> 
         Renaming Columns With .set_axis()
     </td>
-    <td style="font-size: 8px">
-        ```python
-        dict_sub_region=(
-        data.loc[:,['state','subRegion']]
-            .set_index('state')
-            .set_axis(['sub_region'], axis = 1) #renaming columns
-            .to_dict()
-        )
-        ``` 
+    <td>
+        <pre>
+            <code>
+                dict_sub_region=(
+                data.loc[:,['state','subRegion']]
+                    .set_index('state')
+                    .set_axis(['sub_region'], axis = 1) #renaming columns
+                    .to_dict()
+                )
+            </code>
+        </pre>
     </td>
 </tr>
 <tr>
     <td> 
         Catching Current State of a DataFrame during Method Chaining 
     </td>
-    <td style="font-size: 8px">
-        ```python
-        def catchstate(df, var_name: str) -> 'pd.DataFrame':
-        """
-        Helper function that captures intermediate Dataframes mid-chain.
-        In the global namespace, make a new variable called var_name and set it to dataframe
-        """
-        globals()[var_name] = df
-        return df
-        data=(df2_incidents
-            .assign(year=df2_incidents.date.dt.year, month=df2_incidents.date.dt.month)
-            .assign(sub_region=df2_incidents.state.map(dict_sub_region))
-            .pipe(catchstate, var_name="df2")
-            [(df2.sub_region!='Mountain')&(df2.year!=2017)]#filtering outlier of las vegas shooting
-            .groupby(by=['year','sub_region'])
-            .agg(
-                tot_victims=pd.NamedAgg(column="tot_victims", aggfunc="sum"),
-                num_incidents=pd.NamedAgg(column="incident_id", aggfunc="count")
-            ).reset_index()
-        )
-        data
-        ``` 
+    <td>
+        <pre>
+            <code>
+                def catchstate(df, var_name: str) -> 'pd.DataFrame':
+                """
+                Helper function that captures intermediate Dataframes mid-chain.
+                In the global namespace, make a new variable called var_name and set it to dataframe
+                """
+                globals()[var_name] = df
+                return df
+                data=(df2_incidents
+                    .assign(year=df2_incidents.date.dt.year, month=df2_incidents.date.dt.month)
+                    .assign(sub_region=df2_incidents.state.map(dict_sub_region))
+                    .pipe(catchstate, var_name="df2")
+                    [(df2.sub_region!='Mountain')&(df2.year!=2017)]#filtering outlier of las vegas shooting
+                    .groupby(by=['year','sub_region'])
+                    .agg(
+                        tot_victims=pd.NamedAgg(column="tot_victims", aggfunc="sum"),
+                        num_incidents=pd.NamedAgg(column="incident_id", aggfunc="count")
+                    ).reset_index()
+                )
+                data
+            </code>
+        </pre>
     </td>
 </tr>
 
@@ -116,10 +116,12 @@ The intent of this post is to document basic functions related to analyzing data
     <td> 
         Examples 
     </td>
-    <td style="font-size: 8px">
-        ```python
-        data
-        ``` 
+    <td>
+        <pre>
+            <code>
+                data
+            </code>
+        </pre>
     </td>
 </tr>
 -->
@@ -133,7 +135,7 @@ The intent of this post is to document basic functions related to analyzing data
     <td> 
         Removing outer layer of dictionary
     </td>
-    <td style="font-size: 8px">
+    <td>
 
         ```python
         dict_sub_region=(
