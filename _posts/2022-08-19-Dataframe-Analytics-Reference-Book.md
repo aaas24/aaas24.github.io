@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dataframe Analytics Reference Book"
-description: "Basic functions related to analyzing data using DataFrames"
+description: "Common operations with DataFrames"
 date:   2022-08-19
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
 banner_image: blog-1200-400-server-2021-11-22.jpg
