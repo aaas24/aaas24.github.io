@@ -113,7 +113,8 @@ The intent of this post is to document basic functions related to analyzing data
     </tr>
 </table>
 
-# Dictionary Operations
+
+## Dictionary Operations
 
 <table>
     <tr>
