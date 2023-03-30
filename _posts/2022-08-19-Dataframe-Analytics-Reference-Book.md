@@ -36,6 +36,13 @@ The intent of this post is to document basic functions related to analyzing data
 |Using 'query'   |`df.query('colum_Name>=5 and colum_Name<=10')`|
 |||
 
+## Date Formatting Data Operations
+
+|Operation|Example Code|
+|--|--|
+|Converting timestamp into datetime   |`data['dt'] = data['ts'].map(lambda x: datetime.strptime(x, '%Y-%m-%dT%H:%M:%SZ').strftime("%Y-%m-%d"))`|
+|||
+
 ## Chaining Examples
 
 <table>
