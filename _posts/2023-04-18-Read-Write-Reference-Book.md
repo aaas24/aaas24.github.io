@@ -36,7 +36,26 @@ The intent of this post is to document basic functions related to reading & writ
 |HTML|*) `pd.read_html('data.html', index_col=0, parse_dates=['IND_DAY'])`|*) `df.to_html('data.html')`|
 |ZIP| Printing Contents of a Zip File </br>`import zipfile` </br> `with zipfile.ZipFile('/Users/nikpi/ThatExcelSiteGSC/Archive.zip', 'r') as zip:` </br> `zip.printdir()`</br> </br> How to Extract a single file from a Zipfile using </br>ZipFile.extract(member, path=None, pwd=None) </br></br> `with zipfile.ZipFile('/Users/datagy/Archive.zip', 'r') as zip: zip.extract('file1.txt', '/Users/datagy/')` | How to Zip All Files in a Directory </br>`import os` </br> `import zipfile`</br></br>`directory='/Users/datagy/files'` </br>`files = os.listdir(directory)`</br></br>`with zipfile.ZipFile('zipfile.zip', 'w') as zip:`</br>`for file in files:`</br>`file_path=os.path.join(directory, file)`</br>`zip.write(file_path)`|
 ||||
+## ZIP
 
+### Example of opening files from Zip
+```
+import urllib.request as req
+import zipfile
+import io
+
+url = 'https://github.com/ecodan/school-shooting-data/archive/refs/heads/master.zip'
+fin = req.urlopen(url)
+
+with zipfile.ZipFile(io.BytesIO(fin.read())) as z:
+    print(z.namelist())
+    raw_data_2 = pd.read_csv(z.open('school-shooting-data-master/cps_01_formatted.csv'))
+    raw_data_1 = pd.read_csv(z.open('school-shooting-data-master/pah_wikp_combo.csv'))
+
+print(raw_data_2.head())
+print('----------------------------')
+raw_data_1
+```
 ||||
 |--|--|--|
 ||||
