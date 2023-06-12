@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reading/Writing Reference Book"
+title:  "Useful Cleaning Data Functions"
 description: "Useful functions in data cleaning" 
 date:   2023-06-11
 banner_preview: blog-350-250-python-b&w-2021-04-05.jpg
