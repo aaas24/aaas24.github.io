@@ -89,12 +89,12 @@ def catchstate(df, var_name: str) -> 'pd.DataFrame':
 
 ```python
 def replace_column_names(my_list):
-    '''
+    """
     function that replaces values in columns using dictionary provided below.
 
     :param query: List of DataFrame column names.
     :returns: List of columns names formatted .
-    '''
+    """
     col_dict={
         'mailing_or_mail_box_address':'mailing_address'
         'what_is_your_mailing_address?':'mailing_address'
@@ -103,13 +103,13 @@ def replace_column_names(my_list):
     return [x if x not in col_dict else col_dict[x] for x in my_list]
 
 def clean_column_names(df, pprint='False'):
-    '''
+    """
     function to call on after DataFrame is created to format column names in lowercase 
     without spaces before querying.
     
     :param query: DataFrame
     :returns: DataFrame with columns formatted  
-    '''
+    """
     import pandas as pd 
 
     columns=df.columns

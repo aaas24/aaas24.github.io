@@ -114,7 +114,8 @@ Change the NAME_OF_ENV in the following code with the name you want to use as re
 
 ```shell
 conda activate NAME_OF_ENV
-ipython kernel install --name NAME_OF_ENV --user 
+conda install ipykernel # only in case new environment doesn't have library
+python3 -m ipykernel install --user --name=NAME_OF_ENV 
 ```
 
 # Pandas
