@@ -124,7 +124,7 @@ python3 -m ipykernel install --user --name=NAME_OF_ENV
 
 These are code samples of part of the [Udemy Course - Python, SQL and Tableau Integration](https://www.udemy.com/course/python-sql-tableau-integrating-python-sql-and-tableau) that I thought interesting highlighting and they mainly relate to the use of Python's panda and jupyter notebook library. 
 
-### 1) Displaying data
+### Displaying data
 
 Using the max rows and columns option in panda you can configure a scroll window within the output cell to be able to scroll a partial or complete set of the data. Example: 
 
@@ -137,60 +137,7 @@ Using the max rows and columns option in panda you can configure a scroll window
     display(df)
 ```
 
-### 2) Common operations with data frames (df)
 
-* General exploration of data
-
-    |Command |Syntax  | 
-    --- | --- |
-    |Describe|`df.describe`|
-    |Number of Rows and Columns|`df.shape`, where:<br>  `df.shape[0]`= rows & `df.shape[1]`= columns|
-    |Names in Columns|`df.columns.values`|
-    |Column data types|`df.dtypes`|
-    |Min|`df['COLUMN_NAME'].min()`|
-    |Max|`df['COLUMN_NAME'].max()`|
-    |Number of unique values|`len(df['COLUMN_NAME'].unique())`|
-    |Sorted list of unique values|`sorted(df['COLUMN_NAME'].unique())`|
-    |Identify type of value in a column|`type(df_reason_mod['COLUMN_NAME'][0])`|
-    |Count per value in column|`df.['COLUMN_NAME'].value_counts(dropna=False)`|
-    |Traspose|`df.head().T`|
-    |View column with missing value in rows|`df.loc[df.COLUMN_NAME.isna(), ['COLUMN_NAME_1', 'COLUMN_NAME_2', 'COLUMN_NAME_3']]`|
-    |||
-
-*  Operations with rows and columns
-
-    |Command |Syntax  | 
-    --- | --- |
-    |Dropping column|`df=df.drop(['COLUMN_NAME'], axis=1)`|
-    |Adding column|`df['NEW_COLUMN']=df.sum(axis=1)`|
-    |Sum values per row|`df['NEW_COLUMN']=df.sum(axis=1)` |
-    |Sum values per column|`df['COLUMN_NAME'].sum(axis=0)` |
-    |Cut dataframe from Columns A to D|`new_df=df.loc[:,A:D]`|
-    |Concatenate multiple df|`df= pd.concat([df1,df2,df3,df4,...,dfn], axis=1)`|
-    |Renaiming columns|1) get initial values with `column_names=df.columns.value`<br> 2) modify the name value in variable <br> 3) `df.columns=column_names`|
-    |Reordering columns|1) get initial values with `colum_names_reordered=df.columns.value`<br> 2) modify order of values in variable <br> 3) `df=df[colum_names_reordered]`|
-    |Convert values in column to timestamp format. Ex, a column `DATE` with str such as 07/15/2018|`pd.to_datetime(df_reason_mod['Date'], format='%d/%m/%Y')` <br> The convension of the  `format` parameter, [see the 'strftime' documentation](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior)|
-    |Reclassify the values in a column|In a column with 4 distinct values, where we wish to combine 2,3 & 4 as B, and re-label 1 as A: `df['COLUMN_NAME']=df['COLUMN_NAME'].map({1:A,2:B,3:B,4:B})`|
-    |Slice data with iloc|`df.iloc[START_ROW:END_ROW,START_COLUMN:END_COLUMN]`<br> Ex: `df.iloc[:,:-1]`, which is all rows, all columns but the last one|
-    |Where|`df['COLUMN_NAME']= np.where(daf['COLUMN_NAMEs']>CONDITION,TRUE_VALUE,FALSE_VALUE)`|
-    |Filter data|`df[df['COLUMN_NAME']=='VALUE']`|
-    |Temporarily display more rows|`with pd.option_context('display.max_columns', 22, 'display.min_rows',10): display(df)`|
-    |||
-
-* Useful codes snippets
-
-** Find Missing data
-
-For a dataFrame called 'df', this shows the 'percentage' of missing values per column, where there is in fact missing values detected by the '.isna()' function.
-
-``` python
-    ((df
-    .isna()
-    .mean()
-    *100)
-    .pipe(lambda ser:ser[ser>0])
-    )
-```
 # Numpy
 
 *  Statistical Operations
