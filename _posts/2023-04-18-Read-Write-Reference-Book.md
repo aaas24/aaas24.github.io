@@ -18,7 +18,10 @@ The intent of this post is to document basic functions related to reading & writ
 ## TABLE OF CONTENT
 
 
-- [Read & Write Examples](##Read-write-examples) <br>
+- [Read & Write Quick Examples](##summary) <br>
+- [Zip Examples](##zip) <br>
+- [Programatically Examples](##var) <br>
+- [Kaggle Examples](##kaggle) <br>
  
 
 
@@ -26,7 +29,7 @@ The intent of this post is to document basic functions related to reading & writ
 <br>
 <br>
 
-## Read write examples
+## <a name="summary"> QUICK EXAMPLES </a>
 
 |Format| Read Examples| Write Examples|
 |---|---|---|
@@ -39,7 +42,8 @@ The intent of this post is to document basic functions related to reading & writ
 ||||
 
 
-## ZIP
+## <a name="zip"> ZIP </a>
+
 
 ### Example of opening files from Zip
 
@@ -64,7 +68,7 @@ raw_data_1
 |--|--|--|
 ||||
 
-## WRITING PROGRAMMATICALLY
+## <a name="var"> WRITING PROGRAMMATICALLY </a>
 
 ### Example of reading dafataframes
 
@@ -91,6 +95,48 @@ data_location=os.path.join(datasets,'dtd', 'pre_processed_data')
 dataframes=['miseducation_data', 'book_club']
 for d in dataframes:
     vars()[d].to_csv(os.path.join(data_location,d+'.csv'), date_format='%B %d, %Y')
+```
+## <a name="kaggle"> KAGGLE </a>
+
+required functions: 
+
+```python
+import json
+import kaggle
+
+#definitions
+kaggle_type='dataset' #options['dataset', 'competition']
+kaggle_name = 'cooperunion/cardataset' ## Make sure yu accepted rules of competition first
+kaggle_dataset=os.environ.get('KAGGLE_LOC') #path to directory for kaggle
+
+#retrieve location & credentials.
+kaggle_json=os.path.join(kaggle_dataset,'kaggle.json')
+
+try:
+    with open(kaggle_json) as json_data:
+        data = json.load(json_data)
+        kaggle_user=data['username']
+        kaggle_key=data['key']
+        print('Succesffully retrieved kaggle API keys')
+except:
+    print('Error opening kaggle json file in ', kaggle_json)
+
+#connect to api and download files
+wpath=os.path.join(kaggle_dataset, kaggle_name)
+
+if not os.path.exists(wpath):
+    try:
+        if kaggle_type=='competition':
+            kaggle.api.competition_download_cli(kaggle_name, path=wpath, unzip=True)
+        elif kaggle_type=='dataset':
+            kaggle.api.dataset_download_files(kaggle_name, path=wpath, unzip=True)
+        else:
+            print('kaggle_type not recognized')
+    except:
+        print('Error: unable to write. Make sure yu accepted rules of competition first at https://www.kaggle.com/<comp>/rules')
+else:
+    print('Error: directory exists')
+
 ```
 
 # Sources
