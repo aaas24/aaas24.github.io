@@ -65,7 +65,35 @@ The intent of this post is to document basic functions related to analyzing data
 |Filter data|`df[df['COLUMN_NAME']=='VALUE']`|
 |Temporarily display more rows|`with pd.option_context('display.max_columns', 22, 'display.min_rows',10): display(df)`|
 |||
+
 <br>
+
+## Examples of groupby
+
+Use the parameter 'as_index=False' in the groupby to have teh output show in the same level as the input df
+
+``` python
+# initialize data of lists.
+data = {'department': ['shoes', 'clothing', 'shoes', 'furniture']
+        , 'product_type':['shoes', 'shirt', 'shoes', 'furniture']
+        ,'order_amount': [20, 21, 19, 180]
+        ,'taxes_paid':[1.5,2,1.2,10]
+        }
+
+# Create DataFrame
+df = pd.DataFrame(data)
+display(df)
+
+df_result=(df.groupby(['department', 'product_type'], as_index=False)
+           .agg({
+               'order_amount':'sum'
+               ,'taxes_paid':'sum'
+           })
+)
+
+# Print the output.
+display(df_result)
+```
 
 ## Useful codes snippets
 
@@ -87,8 +115,8 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
 
 |Operation|Example Code|
 |--|--|
-|With AND Condition   |`df[(df.state=='Texas') & (df.year==1990)]`|
-|With OR Condition   | `df[(df.state=='Texas') | (df.year==1990)]`|
+|With AND Condition  |` df[(df.state=='Texas') & (df.year==1990)] `|
+|With OR Condition   | `df[(df.state=='Texas') \| (df.year==1990)]`|
 |With != Column Names Nomenclature   |`df[df.state=='Texas'] or df[df['state']=='Texas']`|
 |With a list_of_values   |`data_filtered=df[df.column_Name.isin(list_of_values)]`|
 |Using 'query'   |`df.query('colum_Name>=5 and colum_Name<=10')`|
@@ -104,8 +132,9 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
 |Function to convert columns|`for column in columns_to_date:` </break> `df[column] = pd.to_datetime(df[column], format='%B %d, %Y', errors='coerce')`|
 |||
 
-## Chaining Examples
+<br>
 
+## Chaining Examples
 <table>
     <tr>
         <td> Operation </td> <td> Example Code </td>
@@ -198,6 +227,27 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
                         }
                     )
             df.head(5)
+            </code>
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Cleaning with regex & formatting datetime columns
+        </td>
+        <td>
+            <pre>
+            <code>
+            #cleaning df
+            df2=df.copy()
+            d1=(df2.pop('country')
+                .str.replace('\n','')
+                .str.replace(r"(\||\d)",'',regex=True)
+                .str.replace('[','')
+                .str.replace(']','')
+            date_time_cols=['end_date','start_date']
+            df[date_time_cols] = df[date_time_cols].apply(pd.to_datetime)
+            df=pd.concat([df2, d1], axis=1)
             </code>
             </pre>
         </td>
