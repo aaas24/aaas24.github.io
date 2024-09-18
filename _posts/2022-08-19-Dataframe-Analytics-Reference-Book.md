@@ -97,7 +97,7 @@ display(df_result)
 
 ## Useful codes snippets
 
-** Find Missing data
+* Find Missing data
 
 For a dataFrame called 'df', this shows the 'percentage' of missing values per column, where there is in fact missing values detected by the '.isna()' function.
 
@@ -109,6 +109,8 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
     .pipe(lambda ser:ser[ser>0])
     )
 ```
+
+* Change format of columns
 <br>
 
 ## Filtering Data Operations
