@@ -111,6 +111,7 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
 ```
 
 * Change format of columns
+
 <br>
 
 ## Filtering Data Operations

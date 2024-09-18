@@ -11,9 +11,9 @@ tags: [ python, analytics]
 
 # Project Description
 
-Switching between applications is one of the pitfuls of efficientcy. Remaining in the same UI but benefitting from the efficientcy of different tools is the dream environment for analysts. 
+Switching between applications is one of the pitfalls of efficiency. Remaining in the same UI but benefitting from the efficiency of different tools is the dream environment for analysts. 
 
-This blog post will guide you on how to create an environment that combines the efficientcy of SQL databases (Snowflake), python analytical and visualization libraries and github's code sourcing. 
+This blog post will guide you on how to create an environment that combines the efficiency of SQL databases (Snowflake), python analytical and visualization libraries and github's code sourcing. 
 
 During this setup we will be using 1Password to connect retrieve sensitive information. If you do not have a password manager you may skip these sections
 
@@ -72,11 +72,11 @@ python -m ipykernel install --user --name=myenv
 
 Now that we have set up the applications, it's time to bring everything together in VSCode. 
 
-* Open a new file and save it with the extendsion ".ipynb"
-* In the properties palette (Cmd+ Shit+P in Mac) or by tipying ">" in the search box in VSCode UI we activate the option: "Nobebook: Select Notebook Kernel" and you should see the kernel we created "analytics"
+* Open a new file and save it with the extension ".ipynb"
+* In the properties palette (Cmd+ Shit+P in Mac) or by typing ">" in the search box in VSCode UI we activate the option: "Notebook: Select Notebook Kernel" and you should see the kernel we created "analytics"
 
 <p align="center">
-  <img src="https://github.com/aaas24/aaas24.github.io/raw/main/assets/post_files/2024-08-16-VSCode-for-python-snowflake-github/3.png" width="600" title="">
+  <img src="https://github.com/aaas24/aaas24.github.io/blob/master/assets/post_files/2024-08-16-VSCode-for-python-snowflake-github/3.png?raw=true" width="600" title="">
 </p>
 
 <br>
@@ -91,7 +91,7 @@ Now that we have set up the applications, it's time to bring everything together
 2) Create a record in 1Password with your Snowflake connexion variables. 
 
 <p align="center">
-  <img src="https://github.com/aaas24/aaas24.github.io/raw/main/assets/post_files/2024-08-16-VSCode-for-python-snowflake-github/1.png" width="600" title="">
+  <img src="https://github.com/aaas24/aaas24.github.io/blob/master/assets/post_files/2024-08-16-VSCode-for-python-snowflake-github/1.png?raw=true" width="600" title="">
 </p>
 
 <br>
@@ -165,7 +165,7 @@ You will need your default values, regardless of if you using a password manager
 ```python
 def start_snowflake_connection(credentials):
     """
-    this function stablishes a snowflake connection ir order to later executes a query with SQL commands inside jupyter. It assumes snowflake credentials are stored in the same folder
+    this function establishes a snowflake connection ir order to later executes a query with SQL commands inside jupyter. It assumes snowflake credentials are stored in the same folder
     in dictionary type variable.
 
     This module requires snowflake connector to be installed. 
@@ -261,7 +261,7 @@ with pd.option_context('display.max_columns', 500, 'display.min_rows',100):
 VSCode has native connection to Github so as long as you have connected your location to a repository you can select the "Source Control" tab on the left panel and commit the changes at the end of your session.
 
 <p align="center">
-  <img src="https://github.com/aaas24/aaas24.github.io/raw/main/assets/post_files/2024-08-16-VSCode-for-python-snowflake-github/2.png" width="600" title="">
+  <img src="https://github.com/aaas24/aaas24.github.io/blob/master/assets/post_files/2024-08-16-VSCode-for-python-snowflake-github/2.png?raw=true" width="600" title="">
 </p>
 
 ## RELATED: 
