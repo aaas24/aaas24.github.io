@@ -29,6 +29,8 @@ The intent of this post is to document basic functions related to analyzing data
 # Dataframes Operations
 
 ## Data Exploration
+<br>
+
 
 |Command |Syntax  | 
 | --- | --- |
@@ -46,7 +48,10 @@ The intent of this post is to document basic functions related to analyzing data
 |View column with missing value in rows|`df.loc[df.COLUMN_NAME.isna(), ['COLUMN_NAME_1', 'COLUMN_NAME_2', 'COLUMN_NAME_3']]`|
 |||
 
+<br>
+
 ##  Operations with rows and columns
+<br>
 
 |Command |Syntax  | 
 | --- | --- |
