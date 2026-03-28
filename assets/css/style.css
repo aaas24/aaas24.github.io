@@ -1731,3 +1731,26 @@ figure {
 	}
 
 }
+
+/* ---------------------------------------------- /*
+*   15. Blog post table styles
+/* ---------------------------------------------- */
+
+.blog-detail-content table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1.5em;
+}
+.blog-detail-content table th,
+.blog-detail-content table td {
+	border: 1px solid #ddd;
+	padding: 8px 12px;
+	text-align: left;
+}
+.blog-detail-content table th {
+	background-color: #f5f5f5;
+	font-weight: 600;
+}
+.blog-detail-content table tr:nth-child(even) {
+	background-color: #fafafa;
+}
