@@ -43,7 +43,7 @@ During this setup we will be using 1Password to connect retrieve sensitive infor
 |  1Password|  [website](https://1password.com) |  Paid application |  
 <br>
 
-## <a name="app">  Setting up VSCode
+## <a name="vscode">  Setting up VSCode
 
 1) Download the following Extensions:
 

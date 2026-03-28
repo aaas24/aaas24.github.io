@@ -34,3 +34,8 @@ facebook_username: "username"
 googleplus_username: "+username"
 pinterest_username: "username"
 
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
