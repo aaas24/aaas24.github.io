@@ -17,10 +17,9 @@ The intent of this post is to document basic functions related to analyzing data
 
 ### TABLE OF CONTENT
 
-\
-    - [Data Exploration](##data-exploration)<br>
+    - [Data Exploration](#data-exploration)<br>
     - [Operations with rows and columns](#operations-with-rows-and-columns)<br>
-    - [Filtering Data Operations](##filtering-data-operations) <br>
+    - [Filtering Data Operations](#filtering-data-operations) <br>
     - [Chaining examples](#chaining-examples) <br>
     - [Dictionary Operations](#dictionary-operations) <br>
 
@@ -152,7 +151,7 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
         <td> Groupby & Aggregations Controlling Column Name by Using 'pd.NamedAgg'
         </td>
         <td>
-            <pre> See a code example <a href="https://github.com/aaas24/code_library/tree/main/us_mass_shootings">this</a> workbook.
+            <pre> See a code example <a href="https://github.com/aaas24/code_library/tree/main/us_mass_shootings">this</a> workbook.</pre>
             <pre>
             <code>
             data=(df2   
@@ -271,9 +270,10 @@ For a dataFrame called 'df', this shows the 'percentage' of missing values per c
     </tr>
     <tr><td></td><td></td></tr>
     <tr>
-        <td> 
+        <td>
             Removing outer layer of dictionary
         </td>
+    </tr>
     <tr>
         <td>
             <pre>
