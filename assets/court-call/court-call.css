@@ -1,0 +1,73 @@
+/* Court Call — shared styles for hub doc pages (Night Match). Mirrors court-call/index.html. */
+:root{
+  --bg:#0d1014; --surface:#161b22; --surface2:#1b212a; --line:#232a33;
+  --accent:#c8f751; --ball:#79873a; --coral:#ff5d3b;
+  --text:#f4f6f1; --muted:#9aa3ad;
+  --disp:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"Familjen Grotesk", system-ui, sans-serif;
+  --max:820px;
+}
+*{box-sizing:border-box; margin:0; padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg); color:var(--text); font-family:var(--body); line-height:1.65;
+  -webkit-font-smoothing:antialiased}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
+.accent{color:var(--accent)}
+.mark{display:block}
+.mark .arc{fill:none; stroke:var(--accent); stroke-linecap:round}
+
+/* ---------- nav ---------- */
+nav{position:sticky; top:0; z-index:50; backdrop-filter:blur(10px);
+  background:rgba(13,16,20,.72); border-bottom:1px solid var(--line)}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:1100px}
+.brand{display:flex; align-items:center; gap:11px; font-family:var(--disp); font-weight:800;
+  font-size:20px; letter-spacing:-.02em; color:var(--text)}
+.brand:hover{text-decoration:none}
+.nav-links{display:flex; align-items:center; gap:26px}
+.nav-links a{color:var(--muted); font-size:14px; font-weight:500; transition:color .15s}
+.nav-links a:hover{color:var(--text); text-decoration:none}
+.btn{font-family:var(--disp); font-weight:700; border-radius:11px; display:inline-flex;
+  align-items:center; gap:9px; cursor:pointer; border:none; transition:transform .15s, box-shadow .15s}
+.btn:hover{text-decoration:none}
+.btn-pri{background:var(--accent); color:var(--bg); padding:11px 20px; font-size:14px}
+.btn-pri:hover{transform:translateY(-2px); box-shadow:0 14px 30px -12px rgba(200,247,81,.6)}
+.btn-pri svg{width:17px; height:17px; fill:currentColor}
+@media(max-width:680px){ .nav-links a:not(.nav-cta){display:none} }
+
+/* ---------- doc body (rendered markdown) ---------- */
+.cc-doc{padding:clamp(40px,7vw,72px) 24px clamp(56px,9vw,96px)}
+.cc-doc-title{font-family:var(--disp); font-weight:800; letter-spacing:-.03em; line-height:1.04;
+  font-size:clamp(34px,6vw,56px); margin-bottom:28px}
+.cc-doc h1{font-family:var(--disp); font-weight:800; letter-spacing:-.025em; font-size:clamp(28px,5vw,42px); margin:40px 0 14px}
+.cc-doc h2{font-family:var(--disp); font-weight:700; letter-spacing:-.02em; font-size:clamp(22px,3.4vw,30px);
+  margin:38px 0 12px; padding-top:8px}
+.cc-doc h3{font-family:var(--disp); font-weight:700; font-size:19px; margin:26px 0 8px}
+.cc-doc h4{font-family:var(--disp); font-weight:700; font-size:16px; margin:20px 0 6px; color:#dfe4ea}
+.cc-doc p{color:#cfd5dc; margin:12px 0; font-size:16.5px}
+.cc-doc ul,.cc-doc ol{margin:12px 0 12px 1.3em; color:#cfd5dc}
+.cc-doc li{margin:6px 0; font-size:16.5px}
+.cc-doc strong{color:var(--text); font-weight:700}
+.cc-doc a{color:var(--accent); font-weight:500}
+.cc-doc hr{border:none; border-top:1px solid var(--line); margin:34px 0}
+.cc-doc blockquote{border-left:3px solid var(--accent); background:var(--surface);
+  border-radius:0 10px 10px 0; padding:14px 18px; margin:18px 0; color:#cfd5dc}
+.cc-doc blockquote p{margin:6px 0; font-size:15.5px}
+.cc-doc code{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; background:var(--surface2);
+  border:1px solid var(--line); border-radius:6px; padding:1px 6px; font-size:.92em; color:#e9edf2}
+.cc-doc pre{background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:16px 18px; overflow-x:auto; margin:16px 0}
+.cc-doc pre code{background:none; border:none; padding:0}
+.cc-doc table{width:100%; border-collapse:collapse; margin:18px 0; font-size:15px}
+.cc-doc th,.cc-doc td{border:1px solid var(--line); padding:9px 12px; text-align:left}
+.cc-doc th{background:var(--surface); font-family:var(--disp); font-weight:700; color:var(--text)}
+.cc-doc td{color:#cfd5dc}
+.cc-back{margin-top:48px; padding-top:24px; border-top:1px solid var(--line)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line); padding:40px 0; color:var(--muted); font-size:13.5px}
+footer .wrap{display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; max-width:1100px}
+footer .brand{font-size:16px; color:var(--text); font-family:var(--disp); font-weight:800}
+footer .foot-links{display:flex; gap:22px}
+footer .foot-links a{color:var(--text); font-size:13.5px}
