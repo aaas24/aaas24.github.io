@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{% if page.title %}{{ page.title }}{% else %}Court Call{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Court Call — a player-run tennis community.{% endif %}" />
+<link rel="canonical" href="{{ page.url | prepend: site.url }}" />
+<!-- Google Tag Manager (shared site container) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5MM9LPM8');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="/assets/court-call/court-call.css" rel="stylesheet" />
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MM9LPM8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/court-call/">
+      <svg class="mark" width="34" height="34" viewBox="0 0 120 120" aria-hidden="true">
+        <g transform="translate(60,60) scale(1.2) translate(-76.25,-60)">
+          <path class="arc" d="M46 33 A47 47 0 0 0 46 87" stroke-width="5.5"/>
+          <path class="arc" d="M55 41 A35 35 0 0 0 55 79" stroke-width="4.6" opacity="0.82"/>
+          <circle cx="90" cy="60" r="25" fill="#79873a"/>
+          <path d="M103 45 C88 54 88 66 103 75" fill="none" stroke="#0d1014" stroke-width="2.2" stroke-linecap="round" opacity="0.7"/>
+        </g>
+      </svg>
+      Court Call
+    </a>
+    <div class="nav-links">
+      <a href="/court-call/privacy/">Privacy</a>
+      <a href="/court-call/community-guidelines/">Guidelines</a>
+      <a class="btn btn-pri nav-cta" href="https://discord.gg/XT3W9hThm">
+        <svg viewBox="0 0 24 24"><path d="M20 4a18 18 0 0 0-4.4-1.4l-.3.6A16 16 0 0 1 17 4a16 16 0 0 0-10 0c.5-.3 1.1-.6 1.7-.8l-.3-.6A18 18 0 0 0 4 4 19 19 0 0 0 1 18a18 18 0 0 0 5.4 2.7l.6-1a12 12 0 0 1-1.9-.9l.4-.3a13 13 0 0 0 11 0l.4.3a12 12 0 0 1-1.9.9l.6 1A18 18 0 0 0 23 18 19 19 0 0 0 20 4ZM9 15a1.7 1.7 0 0 1 0-3.4A1.7 1.7 0 0 1 9 15Zm6 0a1.7 1.7 0 0 1 0-3.4A1.7 1.7 0 0 1 15 15Z"/></svg>
+        Join
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- DOC CONTENT -->
+<main class="wrap cc-doc">
+  {% if page.title %}<h1 class="cc-doc-title">{{ page.title }}</h1>{% endif %}
+  {{ content }}
+  <p class="cc-back"><a href="/court-call/">← Back to Court Call</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">
+      <svg width="22" height="22" viewBox="0 0 120 120" aria-hidden="true"><g transform="translate(60,60) scale(1.2) translate(-76.25,-60)"><path class="arc" d="M46 33 A47 47 0 0 0 46 87" stroke-width="6"/><path class="arc" d="M55 41 A35 35 0 0 0 55 79" stroke-width="5.2" opacity="0.82"/><circle cx="90" cy="60" r="25" fill="#79873a"/></g></svg>
+      Court Call
+    </span>
+    <span class="foot-links">
+      <a href="/court-call/privacy/">Privacy</a>
+      <a href="/court-call/community-guidelines/">Community Guidelines</a>
+    </span>
+    <span>Player-run · Self-hosted · © 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
