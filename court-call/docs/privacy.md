@@ -5,10 +5,6 @@ title: "Court Call — Privacy Notice"
 description: "How the Court Call tennis community handles your data: minimal, self-hosted, never sold."
 ---
 
-> ⚠️ **Not legal advice.** This is a plain-language notice written to be honest and accurate about how
-> Court Call handles your data. It is **not** a lawyer-reviewed legal document; treat it as a
-> good-faith summary rather than binding legal terms.
-
 **Last updated:** 2026-05-31 · **Version:** v1.0
 
 ---
