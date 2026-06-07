@@ -23,7 +23,7 @@ By joining, you confirm you're **18 or older** and agree to the guidelines below
 The spirit of the place. Everything below flows from these.
 
 1. **Respect above all.** Treat others as you would on court — with courtesy and fair play. No
-   disrespectful, offensive, or harmful language; no harassment, name-calling, or targeting people.
+   disrespectful, offensive, profane, or harmful language; no harassment, name-calling, or targeting people.
    Disagreement is fine; rudeness isn't.
 
 2. **Keep it tennis.** Conversations center on tennis, fitness, training, equipment, and finding
@@ -52,8 +52,11 @@ Finding games is the whole point of Court Call, and it only works if people show
 - If you commit to a game, **show up** — on time and ready to play.
 - If your plans change, **cancel as early as you can** so someone else can take your spot. Late
   cancellations happen; silent no-shows hurt everyone.
-- **Chronic no-shows or repeated late flaking may lose access.** Reliability is a courtesy to your
-  fellow players, not optional.
+- **Reliability is handled automatically — and kindly.** If you're marked a no-show, the bot first
+  gives you a chance to say "I was there" (and the reporter a chance to take it back) before it
+  counts. Repeated no-shows pause your matching **after three strikes**, and **two clean years clears
+  the slate**. It's an even-handed system, not a person judging you — so games stay dependable
+  without anyone refereeing.
 
 ### 3. Respect privacy
 - Don't share another member's personal information — contact details, location, photos, or
@@ -69,6 +72,12 @@ Finding games is the whole point of Court Call, and it only works if people show
 ### 5. Play fair online too
 - One account per person. Don't impersonate other members or Court Call itself.
 - Don't post illegal content, or anything that puts the community or its members at risk.
+
+### 6. Use your real name
+Use the same name here as on your **CourtReserve** account, so the people you match with can
+recognize you — and cross-check the reservation before you head out. Like the age rule, this is on
+the **honor system**: we ask, we don't verify. But since we don't vet members, your name is the main
+way people confirm who they're playing — so please keep it accurate.
 
 ---
 
@@ -92,7 +101,7 @@ do not background-check or verify members.** When you arrange to play with someo
 ## 🚩 Reporting & Enforcement
 
 ### How to report
-See something — harassment, a safety concern, a chronic no-show, spam? **DM the operator: Discord @aaas24.**
+See something — harassment, a safety concern, or spam? **DM the operator: Discord @aaas24.** *(Routine no-shows are handled automatically by the reliability system above — no need to report those.)*
 
 Reports are handled discreetly. You won't get in trouble for raising a genuine concern.
 
@@ -117,4 +126,4 @@ online and on court. That's it. See you out there. 🎾
 
 ---
 
-*Guidelines version: v1.0 · Last updated: 2026-05-31*
+*Guidelines version: v1.1 · Last updated: 2026-06-07*

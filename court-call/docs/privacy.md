@@ -5,7 +5,7 @@ title: "Court Call — Privacy Notice"
 description: "How the Court Call tennis community handles your data: minimal, self-hosted, never sold."
 ---
 
-**Last updated:** 2026-05-31 · **Version:** v1.0
+**Last updated:** 2026-06-07 · **Version:** v1.1
 
 ---
 
@@ -52,6 +52,12 @@ It helps to separate two things:
 - This is **opt-in and self-managed**: you decide what to put there, and you can change or remove
   any field at any time. We keep no history of profile changes.
 
+**Operational data** — the minimal activity the bot needs to run games and keep them dependable
+(for example, who's in a game and your **reliability standing**). Most of this is held and removed on
+the same minimal terms as your profile. The one exception is a **minimal reliability flag**: like the
+account audit log, it can persist for up to **24 months** even after you leave, so that no-show
+standing can't be wiped simply by deleting and re-joining. It records standing, not your profile content.
+
 **Verification record** — when you pass the join gate:
 - Your Discord user ID (a numeric account identifier)
 - That you confirmed you are 18 or older (a yes/no — see below)
@@ -94,6 +100,11 @@ It helps to separate two things:
   removed for cause that try to rejoin, and debug our own bot. It records that an account existed
   and its lifecycle — not your profile content.
 
+**How the bot shares you with others.** When you look for a game, the bot first shows other players
+an **anonymous** summary — counts and skill levels, never names. Your identity is revealed to another
+player only after **you've both agreed to connect**. That mutual-consent reveal is the only way the
+bot shares your name; anything you choose to share after that is between you and them.
+
 ---
 
 ## 5. The web hub (web.aaas24.io/court-call)
@@ -123,6 +134,9 @@ read a live Discord member count, so it makes no background calls to Discord on 
   is erased** — we do not keep it.
 - **Verification record:** kept while it reflects your current standing. When you leave or are
   removed, the active record is retired and a minimal event is written to the audit log.
+- **Reliability flag:** a minimal record of no-show standing. Unlike profile data, it can persist for
+  up to **24 months** after you leave (mirroring the audit log) so strikes can't be reset by deleting
+  and re-joining; it then deletes on the same schedule.
 - **Audit log:** the bare fact that an account existed and its lifecycle events — kept for **24 months**
   from each event, then **permanently and fully deleted**. We do not keep an anonymized copy, and the
   audit log never contains your profile content.
